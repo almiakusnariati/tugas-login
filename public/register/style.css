@@ -1,0 +1,48 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 20vh auto;
+    background-color: #593f3f; /* Warna latar belakang */
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(159, 128, 128, 0.8); /* Latar belakang transparan */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(7, 5, 5, 0.2); /* Efek bayangan  */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #0a0808; /* Warna teks */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #675c5c; /* Warna border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #515251;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease; /* Efek transisi warna background */
+}
+
+button:hover {
+    background-color: #262926;
+}

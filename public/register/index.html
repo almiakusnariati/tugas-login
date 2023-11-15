@@ -1,0 +1,42 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Login</title>
+</head>
+<body>
+    <form name="login" display: flex;
+    flex-direction: column;
+    gap: 10px; >
+
+    <label for="login" >username</label>
+    <input name ="username" type="text"  placeholder="enter your name">
+    <label for="login">password</label>
+    <input name="password" type="password" placeholder="enter your password">
+    <button>login</button>
+
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("button").onclick = async (e) => {
+      e.preventDefault();
+      const username = document.login.username.value;
+      const password = document.login.password.value;
+      await fetch("/api/daftar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+          },
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      });
+      alert("Akun Anda Sudah Terdaftar.");
+      location.href = "/login";
+    };
+  </script>
